@@ -4,30 +4,48 @@ h1 {
 }
 
 #world {
-  width: 50vw;
-  height: 50vw;
+  width: 40vw;
+  height: 40vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+
 }
-#world .wallClass {
-  width: 4.8vw;
-  height: 4.8vw;
+.wallClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
   background-color: darkturquoise;
-  border: solid white 0.1vw;
-}
-#world .spaceClass {
-  width: 4.8vw;
-  height: 4.8vw;
-  background-color: tomato;
-  border: solid white 0.1vw;
-}
-#world .coinClass {
-  width: 4.8vw;
-  height: 4.8vw;
-  background-color: gold;
-  border: solid white 0.1vw;
+  position: relative;
 }
 
-/*# sourceMappingURL=style.css.map */
+.spaceClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: tomato;
+  position: relative;
+}
+
+.coinClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: gold;
+  position: relative;
+}
+
+.pacmanClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
+
+.pacmanClassMove {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: grey;
+}
