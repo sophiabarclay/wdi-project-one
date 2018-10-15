@@ -3,6 +3,17 @@ h1 {
   font-size: 60px;
 }
 
+.body {
+  display: flex;
+  width: 100vw;
+  height: 40vw;
+}
+
+.instructions {
+  width: 30vw;
+  height: 40vw;
+}
+
 #world {
   width: 40vw;
   height: 40vw;
@@ -40,12 +51,12 @@ h1 {
   width: 3.3vw;
   height: 3.3vw;
   border: solid white 0.03vw;
-  background-color: darkslategrey;
+  background-color: white;
 }
 
-.pacmanClassMove {
+.ghostClass {
   width: 3.3vw;
   height: 3.3vw;
   border: solid white 0.03vw;
-  background-color: grey;
+  background-color: darkslategrey;
 }
