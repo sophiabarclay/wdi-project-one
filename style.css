@@ -60,3 +60,17 @@ h1 {
   border: solid white 0.03vw;
   background-color: darkslategrey;
 }
+
+.ghost2Class {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
+
+.ghost3Class {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
