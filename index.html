@@ -4,16 +4,22 @@
   <meta charset="utf-8">
   <title>Mac-Man</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 </head>
 <body>
-  <h1>Pac-Man</h1>
-  <div class="body">
-    <!-- <div class="instructions"></div> -->
+  <h1>P A C - M A N</h1>
+  <div class="main">
     <div id="world"></div>
-    <!-- <div class="scoreBoard"></div> -->
+    <div id="win">
+      <p>Congratulations, Pac-Man won!<br>Let's play the next level...</p>
+      <button class="levelUp" type="button">ok</button>
+    </div>
+    <div id="lose">
+      <p>You lose!<br>Would you like to play again?</p>
+      <button class="ok" type="button" value="Refresh Page" onClick="window.location.reload()">ok</button>
+    </div>
   </div>
-  <script src="js/script.js" charset="utf-8"></script>
-  <script src="js/world.js" charset="utf-8"></script>
-  <script src="js/ghost.js" charset="utf-8"></script>
+  <script src="js/levels.js" charset="utf-8"></script>
+  <script src="js/testing.js" charset="utf-8"></script>
 </body>
 </html>

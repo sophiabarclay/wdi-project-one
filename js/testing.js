@@ -1,3 +1,4 @@
+/* global level1 */
 // Stop browser moving on keydown (default)
 window.addEventListener('keydown', function(e) {
   if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
@@ -33,17 +34,7 @@ function createWorld() {
       wall.classList.add('wallClass');
       const countDown = document.createElement('div');
       countDown.classList.add('countDownClass');
-      if (rows === 0 || rows === 10 || rows === 1 && columns === 0
-      || rows === 2 && columns === 0 || rows === 3 && columns === 0
-      || rows === 4 && columns === 0 || rows === 6 && columns === 0
-      || rows === 7 && columns === 0 || rows === 8 && columns === 0
-      || rows === 9 && columns === 0 || rows === 1 && columns === 10
-      || rows === 2 && columns === 10 || rows === 3 && columns === 10
-      || rows === 4 && columns === 10 || rows === 6 && columns === 10
-      || rows === 7 && columns === 10 || rows === 8 && columns === 10
-      || rows === 9 && columns === 10 || rows === 3 && columns === 5
-      || rows === 4 && columns === 5 || rows ===  5 && columns === 5
-      || rows === 6 && columns === 5 || rows === 7 && columns === 5) {
+      if (level1[rows][columns] === 1) {
         world.appendChild(wall);
         wall.setAttribute('rowid', rows);
         wall.setAttribute('columnid', columns);
@@ -52,6 +43,25 @@ function createWorld() {
         space.setAttribute('rowid', rows);
         space.setAttribute('columnid', columns);
       }
+      // if (rows === 0 || rows === 10 || rows === 1 && columns === 0
+      // || rows === 2 && columns === 0 || rows === 3 && columns === 0
+      // || rows === 4 && columns === 0 || rows === 6 && columns === 0
+      // || rows === 7 && columns === 0 || rows === 8 && columns === 0
+      // || rows === 9 && columns === 0 || rows === 1 && columns === 10
+      // || rows === 2 && columns === 10 || rows === 3 && columns === 10
+      // || rows === 4 && columns === 10 || rows === 6 && columns === 10
+      // || rows === 7 && columns === 10 || rows === 8 && columns === 10
+      // || rows === 9 && columns === 10 || rows === 3 && columns === 5
+      // || rows === 4 && columns === 5 || rows ===  5 && columns === 5
+      // || rows === 6 && columns === 5 || rows === 7 && columns === 5) {
+      //   world.appendChild(wall);
+      //   wall.setAttribute('rowid', rows);
+      //   wall.setAttribute('columnid', columns);
+      // } else {
+      //   world.appendChild(space);
+      //   space.setAttribute('rowid', rows);
+      //   space.setAttribute('columnid', columns);
+      // }
     }
   }
 }
@@ -81,9 +91,7 @@ function generateRandomXandY() {
     if (randomX === 5) {
       randomX++;
     }
-    console.log('Random X', randomX);
     randomY = Math.floor(Math.random() * (9-1) + 1);
-    console.log('Random Y', randomY);
   }, 3000);
 }
 generateRandomXandY();
@@ -105,6 +113,7 @@ function showPacman() {
 showPacman();
 
 function movePacman(keyNumber) {
+  // console.log(level1[pacmanCurrentY][pacmanCurrentX] !== 1);
   switch(keyNumber.keyCode) {
     case 37:
       console.log(pacmanCurrentX, pacmanCurrentY);
