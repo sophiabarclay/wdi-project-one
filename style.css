@@ -1,0 +1,142 @@
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+  color: tomato;
+  font-size: 60px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 40vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#world {
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.wallClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkturquoise;
+  position: relative;
+}
+
+.spaceClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: tomato;
+  position: relative;
+}
+
+.countDownClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: green;
+  position: relative;
+  color: white;
+  content: '1';
+}
+
+.coinClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: gold;
+  position: relative;
+}
+
+.pacmanClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: white;
+}
+
+.ghostClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
+
+.ghost2Class {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
+
+.ghost3Class {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkslategrey;
+}
+
+#win, #lose {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30vw;
+    border: solid black 0.03vw;
+    text-align: center;
+    padding: 3vw 0 3vw 0;
+    align-self: center;
+    background-color: white;
+}
+
+button {
+  margin: 0 auto;
+  border: none;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  transition: 1s;
+}
+
+button:hover:before {
+  content: '\00bb   ';
+  color: tomato;
+}
+
+
+button:hover:after {
+  content: '   \00ab';
+  color: tomato;
+}
+
+.levelDisplayClass {
+  width: 30vw;
+  height: 1vw;
+  padding: 1vw;
+  margin-top: 1vw;
+  color: darkslategrey;
+  text-align: center;
+  font-size: 26px;
+}
+
+.scoreBoardClass {
+  width: 30vw;
+  height: 1vw;
+  padding: 1vw;
+  /* margin-top: 1vw; */
+  color: darkslategrey;
+  text-align: center;
+  font-size: 22px;
+}
