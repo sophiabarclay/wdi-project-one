@@ -18,11 +18,11 @@ const complete = document.getElementById('complete');
 complete.style.display = 'none';
 let pacmanCurrentX = 1;
 let pacmanCurrentY = 1;
-let ghostCurrentX = 9;
 let ghostsCurrentX = [9, 1, 9];
 let ghostsCurrentY = [9, 9, 1];
 const winOk = document.getElementById('winOk');
 const loseOk = document.getElementById('loseOk');
+const completeOk = document.getElementById('completeOk');
 let level = 1;
 let score = 1;
 let currentLevel = level1;
@@ -71,11 +71,13 @@ createWorld();
 winOk.addEventListener('click', levelUp);
 
 function levelUp() {
+  currentLevelNumber = 2;
   destroyWorld();
   createWorld();
   winAlert.style.display = 'none';
   ghostsCanMove = true;
   level++;
+  updateLevel();
   currentLevel = level2;
   pacmanCurrentX = 1;
   pacmanCurrentY = 1;
@@ -85,6 +87,10 @@ function levelUp() {
 }
 
 loseOk.addEventListener('click', function() {
+  location.reload();
+});
+
+completeOk.addEventListener('click', function() {
   location.reload();
 });
 
@@ -100,13 +106,20 @@ function destroyWorld() {
 const levelDisplay = document.createElement('div');
 levelDisplay.classList.add('levelDisplayClass');
 document.body.appendChild(levelDisplay);
-levelDisplay.textContent = 'LEVEL:  ' + level;
+
+function updateLevel() {
+  levelDisplay.textContent = 'LEVEL:  ' + level;
+}
+updateLevel();
 
 // Create Scoreboard
 const scoreBoard = document.createElement('div');
 scoreBoard.classList.add('scoreBoardClass');
 document.body.appendChild(scoreBoard);
 scoreBoard.textContent = 'YOUR SCORE: ' + score;
+
+const coinsInTheWorld = document.getElementsByClassName('coinClass');
+
 
 // Create Pacman
 function showPacman() {
@@ -168,22 +181,25 @@ function movePacman(keyNumber) {
   }
   showPacman();
   // CHECK WIN
-  const coinsInTheWorld = document.getElementsByClassName('coinClass');
+  // const coinsInTheWorld = document.getElementsByClassName('coinClass');
   const totalCoins = coinsInTheWorld.length;
   score = totalCoins + 1;
-  scoreBoard.textContent = 'YOUR SCORE: ' + score;
   console.log('level', currentLevelNumber, 'coins', totalCoins);
-  if (currentLevelNumber === 1 && totalCoins === 18) {
+  // scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  if (currentLevelNumber === 1 && totalCoins === 78) {
     winAlert.style.display = 'block';
     ghostsCanMove = false;
     currentLevel = level2;
-    currentLevelNumber = 2;
     scoreBoard.textContent = 'YOUR SCORE: ' + score;
-  } else if (currentLevelNumber === 2 && totalCoins >= 25) {
+  } else if (currentLevelNumber === 2 && totalCoins >= 70) {
     console.log('Win level 2');
     complete.style.display = 'block';
     ghostsCanMove = false;
     scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  } if (currentLevelNumber === 1) {
+    scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  } else if (currentLevelNumber === 2) {
+    scoreBoard.textContent = 'YOUR SCORE: ' + (score += 78);
   }
 }
 
@@ -257,15 +273,10 @@ function checkCollision() {
 checkCollision();
 
 
-// NOTE Things to do:
-// 6. Stop ghosts colliding
-// 8. CountDown Spaces
-
 // NOTE Problems
 // 1. SASS
-// 2. Global scope
 
-
+// Extra code
 // //Create Countdown squares
 // const countDownSpace = document.createElement('div');
 // countDownSpace.classList.add('countDownClass');

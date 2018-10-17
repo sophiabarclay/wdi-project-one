@@ -71,6 +71,7 @@ createWorld();
 winOk.addEventListener('click', levelUp);
 
 function levelUp() {
+  currentLevelNumber = 2;
   destroyWorld();
   createWorld();
   winAlert.style.display = 'none';
@@ -116,6 +117,9 @@ const scoreBoard = document.createElement('div');
 scoreBoard.classList.add('scoreBoardClass');
 document.body.appendChild(scoreBoard);
 scoreBoard.textContent = 'YOUR SCORE: ' + score;
+
+const coinsInTheWorld = document.getElementsByClassName('coinClass');
+
 
 // Create Pacman
 function showPacman() {
@@ -177,22 +181,25 @@ function movePacman(keyNumber) {
   }
   showPacman();
   // CHECK WIN
-  const coinsInTheWorld = document.getElementsByClassName('coinClass');
+  // const coinsInTheWorld = document.getElementsByClassName('coinClass');
   const totalCoins = coinsInTheWorld.length;
   score = totalCoins + 1;
-  scoreBoard.textContent = 'YOUR SCORE: ' + score;
   console.log('level', currentLevelNumber, 'coins', totalCoins);
-  if (currentLevelNumber === 1 && totalCoins === 18) {
+  // scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  if (currentLevelNumber === 1 && totalCoins === 78) {
     winAlert.style.display = 'block';
     ghostsCanMove = false;
     currentLevel = level2;
-    currentLevelNumber = 2;
     scoreBoard.textContent = 'YOUR SCORE: ' + score;
-  } else if (currentLevelNumber === 2 && totalCoins >= 25) {
+  } else if (currentLevelNumber === 2 && totalCoins >= 70) {
     console.log('Win level 2');
     complete.style.display = 'block';
     ghostsCanMove = false;
     scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  } if (currentLevelNumber === 1) {
+    scoreBoard.textContent = 'YOUR SCORE: ' + score;
+  } else if (currentLevelNumber === 2) {
+    scoreBoard.textContent = 'YOUR SCORE: ' + (score += 78);
   }
 }
 
@@ -266,15 +273,10 @@ function checkCollision() {
 checkCollision();
 
 
-// NOTE Things to do:
-// 6. Stop ghosts colliding
-// 8. CountDown Spaces
-
 // NOTE Problems
 // 1. SASS
-// 2. Global scope
 
-
+// Extra code
 // //Create Countdown squares
 // const countDownSpace = document.createElement('div');
 // countDownSpace.classList.add('countDownClass');

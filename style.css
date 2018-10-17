@@ -6,6 +6,7 @@ h1 {
   color: tomato;
   font-size: 60px;
   text-align: center;
+  margin-bottom: 2vw;
 }
 
 .main {
@@ -19,6 +20,7 @@ h1 {
 #world {
   width: 40vw;
   height: 40vw;
+  margin-right: 1.2vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,7 +45,7 @@ h1 {
   position: relative;
 }
 
-.countDownClass {
+/* .countDownClass {
   width: 3.3vw;
   height: 3.3vw;
   border: solid white 0.03vw;
@@ -51,7 +53,7 @@ h1 {
   position: relative;
   color: white;
   content: '1';
-}
+} */
 
 .coinClass {
   width: 3.3vw;
@@ -68,21 +70,7 @@ h1 {
   background-color: white;
 }
 
-.ghost1Class {
-  width: 3.3vw;
-  height: 3.3vw;
-  border: solid white 0.03vw;
-  background-color: darkslategrey;
-}
-
-.ghost2Class {
-  width: 3.3vw;
-  height: 3.3vw;
-  border: solid white 0.03vw;
-  background-color: darkslategrey;
-}
-
-.ghost3Class {
+.ghost1Class, .ghost2Class, .ghost3Class {
   width: 3.3vw;
   height: 3.3vw;
   border: solid white 0.03vw;
@@ -94,13 +82,15 @@ h1 {
     left: 0;
     right: 0;
     margin: auto;
-    width: 30vw;
+    width: 26vw;
     border: solid black 0.03vw;
     text-align: center;
     padding: 3vw 0.5vw 3vw 0.5vw;
     align-self: center;
     background-color: white;
+    font-size: 16px;
 }
+
 
 button {
   margin: 0 auto;
@@ -130,11 +120,11 @@ button:hover:after {
   text-align: center;
 }
 
-.scoreBoardClass {
-  font-size: 22px;
+.levelDisplayClass {
+  margin-top: -2vw;
+  font-size: 18px;
 }
 
-
-.levelDisplayClass {
-  font-size: 26px;
+.scoreBoardClass {
+  font-size: 18px;
 }
