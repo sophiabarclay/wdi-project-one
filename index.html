@@ -12,11 +12,15 @@
     <div id="world"></div>
     <div id="win">
       <p>Congratulations, Pac-Man won!<br>Let's play the next level...</p>
-      <button class="levelUp" type="button">ok</button>
+      <button id="winOk">ok</button>
     </div>
     <div id="lose">
       <p>You lose!<br>Would you like to play again?</p>
-      <button class="ok" type="button" value="Refresh Page" onClick="window.location.reload()">ok</button>
+      <button id="loseOk">ok</button>
+    </div>
+    <div id="complete">
+      <p>Congratulations!<br> You have completed the game.<br>Would you like to play again?</p>
+      <button id="completeOk">ok</button>
     </div>
   </div>
   <script src="js/levels.js" charset="utf-8"></script>
