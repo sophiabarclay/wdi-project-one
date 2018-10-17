@@ -57,7 +57,7 @@ function createWorld() {
       //   world.appendChild(wall);
       //   wall.setAttribute('rowid', rows);
       //   wall.setAttribute('columnid', columns);
-      // } else {
+      // } else {-
       //   world.appendChild(space);
       //   space.setAttribute('rowid', rows);
       //   space.setAttribute('columnid', columns);
@@ -80,7 +80,6 @@ scoreBoard.textContent = 'YOUR SCORE: ' + score;
 
 // //Create Countdown squares
 const countDownSpace = document.createElement('div');
-countDownSpace.innerHTML = '5';
 countDownSpace.classList.add('countDownClass');
 let randomX;
 let randomY;
@@ -100,7 +99,7 @@ function randomSpaceInterval() {
   setInterval(() => {
     const randomSpace = document.querySelector(`div[rowid="${randomY}"][columnid="${randomX}"]`);
     randomSpace.classList.add('countDownClass');
-  }, 3000);
+  }, 8000);
 }
 randomSpaceInterval();
 
