@@ -31,8 +31,6 @@ let ghostsCanMove = true;
 
 // Create world
 function createWorld() {
-  console.log(currentLevel);
-  console.log(currentLevelNumber);
   for (let rows = 0; rows < 11; rows++) {
     for (let columns = 0; columns < 11; columns++) {
       const space = document.createElement('div');
@@ -184,7 +182,6 @@ function movePacman(keyNumber) {
   // const coinsInTheWorld = document.getElementsByClassName('coinClass');
   const totalCoins = coinsInTheWorld.length;
   score = totalCoins + 1;
-  console.log('level', currentLevelNumber, 'coins', totalCoins);
   // scoreBoard.textContent = 'YOUR SCORE: ' + score;
   if (currentLevelNumber === 1 && totalCoins === 78) {
     winAlert.style.display = 'block';
