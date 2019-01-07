@@ -9,6 +9,8 @@ SQUARES was designed for my first project at General Assembly, and was my first 
 
 If the player collides with a ghost they are given the option to start again, and if they succeed in covering all of the red squares, they are given the option to play the second level.
 
+Play the game on GitHub Pages [here](https://sophiabarclay.github.io/wdi-project-one/).
+
 ## Technologies Used
 
 * HTML5
