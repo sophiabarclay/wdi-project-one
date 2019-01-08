@@ -4,6 +4,8 @@
 ## Brief
 Design a grid-based game that works in the user's browser. Players must be able to win and lose. The game should be built using HTML5, CSS3, and Javascript.
 
+**Timeframe**: 1 week
+
 ## Overview
 SQUARES was designed for my first project at General Assembly, and was my first solo attempt at using JavaScript. The game is loosely based on the same concept as Pac-Man, whereby the player (white) must cover all of the red squares while avoiding the randomly moving grey squares, or 'ghosts'
 
