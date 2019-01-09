@@ -38,8 +38,6 @@ I had a lot of fun creating multiple layers with my grid system of walls (blue),
 Given more time, there is a fair amount of refactoring that I would have liked to complete. This first project clarified the importance of thorough planning and giving myself more time after reaching MVP to trim down my code.
 
 ## Future Features
-First up on my to do list of improving SQUARES would be to add a scoreboard, allowing users to save scores and compete with other users.
-
-Next, I would like to create additional levels to the game as well as faster moving ghosts as the user progresses through the levels.
-
-Other additional features I could add include bonus point squares and ghost-freezing squares which would appear on the grid for a limited time.
+* Add a scoreboard, allowing users to save scores and compete with other users
+* Create additional levels to the game as well as faster moving ghosts as the user progresses through the levels
+* Add bonus point squares and ghost-freezing squares which would appear on the grid for a limited time
