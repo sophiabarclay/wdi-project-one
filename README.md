@@ -32,7 +32,7 @@ Before deciding on which grid-based game I wanted to create for this project, I 
 I had a lot of fun creating multiple layers with my grid system of walls (blue), unvisited squares (red) and visited squares (gold), and am proud of how my logic played out.
 
 ### Level 2
-![levels width="300"](./images/screenshots/Squares2.gif)
+![levels width="300"](./images/screenshots/Levels1and2.png)
 
 ### Challenges
 Given more time, there is a fair amount of refactoring that I would have liked to complete. This first project clarified the importance of thorough planning and giving myself more time after reaching MVP to trim down my code.
