@@ -24,12 +24,15 @@ Play the game on GitHub Pages [here](https://sophiabarclay.github.io/wdi-project
 
 ## Design
 Before deciding on which grid-based game I wanted to create for this project, I researched a number of different options and discovered that the majority of games in this area follow similar design principles: what I refer to as the early-80s arcade aesthetic. In response to the overload of pixellated, neon-on-black observed during this research stage, I opted for the complete opposite, keeping the design stripped-down and minimal, a refreshing change in my opinion.
-![levels width="300"](./images/screenshots/Levels.gif)
+![levels width="300"](./images/screenshots/Squares.gif)
 
 ## Wins and Challenges
 
 ### Wins
-I had a lot of fun creating the grid system of walls (blue), unvisited squares (red) and visited squares (gold), and am proud of how my logic played out.
+I had a lot of fun creating multiple layers with my grid system of walls (blue), unvisited squares (red) and visited squares (gold), and am proud of how my logic played out.
+
+### Level 2
+![levels width="300"](./images/screenshots/Squares2.gif)
 
 ### Challenges
 Given more time, there is a fair amount of refactoring that I would have liked to complete. This first project clarified the importance of thorough planning and giving myself more time after reaching MVP to trim down my code.
