@@ -31,13 +31,102 @@ Before deciding on which grid-based game I wanted to create for this project, I 
 ### Wins
 I had a lot of fun creating multiple layers with my grid system of walls (blue), unvisited squares (red) and visited squares (gold), and am proud of how my logic played out.
 
-### Level 2
+As demonstrated in my code below, the grid is created with DOM manipulation based on grids represented in the two variables level1 and level2. As defined in the createWorld function, which maps through 11 rows and 11 columns, when the array value is 1, the function appends 'wall' to the DOM, and when the value is 0, it appends 'space'. 
+
+JavaScript:
+<pre>
+const level1 = [
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+];
+const level2 = [
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+  [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+  [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+];
+
+let currentLevel = level1;
+
+</pre>
+<pre>
+function createWorld() {
+  for (let rows = 0; rows < 11; rows++) {
+    for (let columns = 0; columns < 11; columns++) {
+      <b>const space = document.createElement('div');
+      space.classList.add('spaceClass');
+      const wall = document.createElement('div');
+      wall.classList.add('wallClass');</b>
+      const countDown = document.createElement('div');
+      countDown.classList.add('countDownClass');
+      if (currentLevelNumber === 1) {
+        <b>if (level1[rows][columns] === 1) {
+          world.appendChild(wall);</b>
+          wall.setAttribute('rowid', rows);
+          wall.setAttribute('columnid', columns);
+        } else {
+          <b>world.appendChild(space);</b>
+          space.setAttribute('rowid', rows);
+          space.setAttribute('columnid', columns);
+        }
+      } else if (currentLevelNumber === 2) {
+        if (level2[rows][columns] === 1) {
+          world.appendChild(wall);
+          wall.setAttribute('rowid', rows);
+          wall.setAttribute('columnid', columns);
+        } else {
+          world.appendChild(space);
+          space.setAttribute('rowid', rows);
+          space.setAttribute('columnid', columns);
+        }
+      }
+    }
+  }
+}
+createWorld();
+</pre>
+
+CSS:
+```
+.wallClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: darkturquoise;
+  position: relative;
+}
+
+.spaceClass {
+  width: 3.3vw;
+  height: 3.3vw;
+  border: solid white 0.03vw;
+  background-color: tomato;
+  position: relative;
+}
+```
+
 ![levels width="300"](./images/screenshots/Levels1and2.png)
 
 ### Challenges
 Given more time, there is a fair amount of refactoring that I would have liked to complete. This first project clarified the importance of thorough planning and giving myself more time after reaching MVP to trim down my code.
 
 ## Future Features
-* Add a scoreboard, allowing users to save scores and compete with other users
+* Add a score leaderboard allowing users to save scores and compete with other users
 * Create additional levels to the game as well as faster moving ghosts as the user progresses through the levels
 * Add bonus point squares and ghost-freezing squares which would appear on the grid for a limited time
